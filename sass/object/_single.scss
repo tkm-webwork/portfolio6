@@ -1,0 +1,468 @@
+.wp_social_bookmarking_light {
+  padding: 0 !important;
+}
+
+.single {
+  padding-top: 60px;
+  padding-bottom: 70px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .single-inner {
+    width: 895px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+
+    @include mq('sp') {
+      display: block;
+    }
+  }
+
+  .single-left {
+    width: 65.9217877095%;
+    max-width: 100%;
+
+    @include mq('sp') {
+      width: 100%;
+    }
+  }
+
+  .single-article {
+
+  }
+
+  .single-category {
+    a {
+      min-width: 110px;
+      max-width: 100%;
+      padding: 6px 4px;
+      background: cl(text);
+      color: cl(white);
+      text-align: center;
+      font-size: 1.2rem;
+      transition: opacity 0.3s ease 0s;
+      display: inline-block;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .single-title {
+    margin-top: 20px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: (42 / 28);
+    word-break:break-all;
+
+    @include mq('sp') {
+      font-size: 2rem;
+    }
+  }
+
+  .single-info {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+
+    @include mq('sp') {
+      display: block;
+    }
+  }
+
+  .single-sns {
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    p {
+      color: cl(white);
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 20px;
+      margin-left: 4px;
+    }
+  }
+
+  .single-time {
+    margin-left: auto;
+    line-height: (27 / 16);
+
+    @include mq('sp') {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  .single-image {
+    margin-top: 22px;
+    img {
+      display: block;
+    }
+  }
+
+  .single-cont {
+    margin-top: 40px;
+    h2 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      line-height: (39 / 26);
+
+      @include mq('sp') {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      margin-top: 26px;
+      line-height: (24 / 16);
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      padding-left: 14px;
+      position: relative;
+      line-height: (33 / 22);
+
+      @include mq('sp') {
+        font-size: 1.8rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        background: cl(text);
+        height: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+    }
+
+    blockquote {
+      background: #F8F8F8;
+      position: relative;
+      margin: 20px 0 0;
+      padding: 25px 30px 45px 70px;
+      line-height: (24 / 16);
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      &::after {
+        content: "“";
+        color: #B4B4B4;
+        position: absolute;
+        left: 17px;
+        top: -5px;
+        font-size: 9rem;
+      }
+    }
+
+    img {
+      margin-top: 30px;
+      display: block;
+    }
+
+    ul {
+      margin-top: 30px;
+      li {
+        padding-left: 30px;
+        line-height: (24 / 16);
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          background: cl(button);
+          border-radius: 50%;
+          top: 7px;
+          left: 0;
+        }
+      }
+    }
+
+    a {
+        margin-top: 60px;
+        text-decoration: underline;
+        color: cl(button);
+        font-size: 1.8rem;
+        transition: opacity .3s ease 0s;
+
+        &:hover {
+          opacity: 0.4;
+        }
+    }
+  }
+
+  .single-rec {
+    margin-top: 60px;
+  }
+
+  .single-rec__title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: (39 / 26);
+
+    @include mq('sp') {
+      font-size: 2rem;
+    }
+  }
+
+  .single-rec__list {
+    margin-top: 20px;
+  }
+
+  .single-rec__item {
+    position: relative;
+
+    &:nth-child(n + 2) {
+      margin-top: 28px;
+    }
+
+
+    a {
+      display: flex;
+      flex-flow: row-reverse;
+      transition: opacity .3s ease 0s;
+
+      @include mq('sp') {
+        flex-flow: column-reverse;
+      }
+
+      &:hover {
+        opacity: 0.4;
+
+        .rec-image {
+          overflow: hidden;
+          img {
+            transform:scale(1.2,1.2);
+            transition: transform 0.8s ease 0s;
+          }
+        }
+      }
+
+
+
+      .rec__text {
+        flex: 1;
+        margin-left: 32px;
+        @include mq('sp') {
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+      }
+
+      .rec-date {
+
+      }
+
+      .rec__title {
+        font-size: 1.8rem;
+        line-height: (27 / 18);
+        font-weight: bold;
+        text-decoration: underline;
+        margin-top: 24px;
+        word-break:break-all;
+
+        @include mq('sp') {
+          font-size: 1.4rem;
+          margin-top: 8px;
+        }
+      }
+
+      .rec__wrap {
+        width: 35.593220339%;
+
+        @include mq('sp') {
+          width: 100%;
+        }
+      }
+
+      .rec-category {
+        position: absolute;
+        color: cl(white);
+        font-size: 1.2rem;
+        text-align: center;
+        background: cl(text);
+        padding: 8px 2px;
+        max-width: 100%;
+        min-width: 80px;
+        line-height: 1;
+        z-index: 2;
+
+        @include mq('sp') {
+          minx-width: 60px;
+        }
+      }
+
+      .rec-image {
+        position: relative;
+        width: 100%;
+        padding-top: 60.9523809524%;
+        overflow: hidden;
+
+        @include mq('sp') {
+          padding-top: 73.33333333%;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+
+    }
+  }
+
+  .single-right {
+    width: 34.0782122905%;
+    margin-left: 36px;
+
+    @include mq('sp') {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 50px;
+    }
+  }
+
+  .single-related {
+
+  }
+
+  .single-head__title {
+    text-align: center;
+    color: cl(white);
+    background: cl(text);
+    font-weight: bold;
+    font-size: 2.1rem;
+    width: 100%;
+    padding: 14px 6px;
+  }
+
+  .related-item__wrap {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .related-item {
+    &:nth-child(n + 2) {
+      margin-top: 40px;
+    }
+    a {
+      display: flex;
+      flex-flow: row-reverse;
+      transition: opacity .3s ease 0s;
+
+      @include mq('sp') {
+        flex-flow: column-reverse;
+      }
+
+      &:hover {
+        opacity: 0.4;
+
+
+        .thumbnail-image {
+          overflow: hidden;
+          img {
+            transform:scale(1.2,1.2);
+            transition: transform 0.8s ease 0s;
+          }
+        }
+      }
+
+      .related-item__text {
+        flex: 1;
+        font-size: 1.2rem;
+        text-decoration: underline;
+        line-height: (24 / 12);
+        margin-left: 17px;
+        margin-top: -4px;
+        word-break:break-all;
+
+        @include mq('sp') {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+
+      .related-item__thumbnail {
+        width: calc(100% - 169px);
+
+        @include mq('sp') {
+          width: 100%;
+        }
+      }
+
+      .thumbnail-image {
+        position: relative;
+        width: 100%;
+        padding-top: 70%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .single-cat {
+
+  }
+
+  .cat-list {
+    margin-top: 30px;
+  }
+
+  .cat-item {
+    position: relative;
+
+    &:nth-child(n + 2) {
+      margin-top: 6px;
+    }
+
+    &::before {
+      content: "・";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    a {
+      font-weight: bold;
+      transition: opacity .3s ease 0s;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}

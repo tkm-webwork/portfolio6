@@ -1,0 +1,175 @@
+.feature {
+  padding: 47px 0 39px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  .feature-cont {
+    margin-top: 44px;
+
+    @include mq('sp') {
+      margin-top: 40px;
+    }
+  }
+
+  .feature-list {
+    width: 100%;
+  }
+
+  .feature-item {
+    display: flex;
+
+    @include mq('sp') {
+      flex-flow: column-reverse;
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 55px;
+
+      @include mq('sp') {
+        margin-top: 40px;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-flow: row-reverse;
+      @include mq('sp') {
+        flex-flow: column-reverse;
+      }
+
+      .feature-text {
+        margin-right: 0;
+        margin-left: 50px;
+
+        @include mq('sp') {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .feature-desc {
+        margin-top: 28px;
+
+        @include mq('sp') {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .feature-desc {
+        margin-top: 38px;
+
+        @include mq('sp') {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  .feature-text {
+    flex: 1;
+    margin-right: 50px;
+
+    @include mq('sp') {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 16px;
+    }
+  }
+
+  .feature-image {
+    width: 350px;
+
+    @include mq('sp') {
+      width: 100%;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  .feature-label {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: cl(white);
+    font-size: 1.2rem;
+    background: cl(button);
+  }
+
+  .feature-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: (39 / 26);
+    margin-top: 28px;
+
+    @include mq('sp') {
+      font-size: 2.4rem;
+      margin-top: 16px;
+    }
+  }
+
+  .feature-desc {
+    line-height: (27 / 16);
+    margin-top: 28px;
+
+    @include mq('sp') {
+      margin-top: 16px;
+    }
+  }
+
+  .feature-price {
+    background: transparent url(../img/price.png) no-repeat center center / cover;
+    color: cl(white);
+    text-align: center;
+    padding: 52px 16px 53px;
+    margin-top: 93px;
+
+    @include mq('sp') {
+      margin-top: 40px;
+      padding: 25px 16px 20px;
+    }
+  }
+
+  .price-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding-right: 16px;
+
+    @include mq('sp') {
+      font-size: 2.4rem;
+    }
+  }
+
+  .price-button {
+    margin-top: 19px;
+    a {
+      font-weight: bold;
+      width: 200px;
+      max-width: 100%;
+      border: 1px solid cl(white);
+      border-radius: 30px;
+      display: inline-block;
+      padding: 0.63em 0;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background: cl(white);
+        color: cl(text);
+      }
+    }
+  }
+}

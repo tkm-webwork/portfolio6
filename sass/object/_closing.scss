@@ -1,0 +1,58 @@
+.closing {
+  background: transparent url(../img/cta.png) no-repeat center center / cover;
+  padding-top: 59px;
+  padding-bottom: 36px;
+  color: cl(white);
+  text-align: center; 
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .closing-title {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+
+    @include mq('sp') {
+      font-size: 2.8rem;
+    }
+  }
+
+  .closing-button {
+    margin-top: 13px;
+    a {
+      transition: background .3s ease 0s;
+      width: 280px;
+      max-width: 100%;
+      background: cl(button);
+      font-weight: bold;
+      display: inline-block;
+      padding: 12px 4px;
+      border-radius: 25px;
+
+      &:hover {
+        background: cl(hover);
+      }
+    }
+  }
+
+  .closing-text {
+    margin-top: 17px;
+    a {
+      transition: opacity .3s ease 0s;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+}

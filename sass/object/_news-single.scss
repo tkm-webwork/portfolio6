@@ -1,0 +1,154 @@
+.news-single {
+  padding-top: 53px;
+  padding-bottom: 57px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .news-single__head {
+    .news-title {
+      font-size: 2.8rem;
+      line-height: (48 / 28);
+      font-weight: bold;
+
+      @include mq('sp') {
+        font-size: 2.4rem;
+        line-height: 1.4;
+      }
+    }
+
+    .news-date {
+      line-height: (27 / 16);
+      display: block;
+      text-align: right;
+      margin-top: 35px;
+
+      @include mq('sp') {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .news-single__cont {
+    margin-top: 48px;
+
+    @include mq('sp') {
+      margin-top: 25px;
+    }
+
+    h3 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      line-height: (39 / 26);
+
+      @include mq('sp') {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      line-height: (24 / 16);
+      margin-top: 20px;
+    }
+
+    h4 {
+      font-size: 2.2rem;
+      line-height: (33 / 22);
+      font-weight: bold;
+      padding-left: 14px;
+      margin-top: 46px;
+      position: relative;
+
+      @include mq('sp') {
+        font-size: 1.8rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 28px;
+        background: cl(text);
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    blockquote {
+      position: relative;
+      background: #F8F8F8;
+      padding: 4px 26px 34px 74px;
+      margin: 48px 0 0;
+
+      &::after {
+        content: "“";
+        color: #B4B4B4;
+        position: absolute;
+        left: 17px;
+        top: -15px;
+        font-size: 9rem;
+      }
+
+      p {
+        line-height: (24 / 16);
+      }
+    }
+
+    img {
+      margin-top: 30px;
+      width: 400px;
+      height: 250px;
+
+
+      @include mq('sp') {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    ul {
+      margin-top: 32px;
+      width: 600px;
+      max-width: 100%;
+      li {
+        line-height: (24 / 16);
+        padding-left: 46px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          background: cl(button);
+          border-radius: 50%;
+          top: 7px;
+          left: 13px;
+        }
+      }
+    }
+
+    a {
+      margin-top: 53px;
+      padding-left: 15px;
+      line-height: (24 / 16);
+      color: cl(button);
+      text-decoration: underline;
+      display: inline-block;
+      transition: opacity .3s ease 0s;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+
+  }
+}

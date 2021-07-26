@@ -1,0 +1,128 @@
+.blog-archive {
+  padding-top: 50px;
+  padding-bottom: 45px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .archive-cont {
+    margin-top: 51px;
+  }
+
+  .archive-list {
+
+  }
+
+  .archive-item {
+
+    &:nth-child(n + 2) {
+      margin-top: 61px;
+
+      @include mq('sp') {
+        margin-top: 50px;
+      }
+    }
+
+    a {
+      display: flex;
+      flex-flow: row-reverse;
+      justify-content: flex-start;
+      transition: opacity .3s ease 0s;
+
+      &:hover {
+        opacity: 0.6;
+        transition: opacity .3s ease 0s;
+
+        .archive-image {
+          overflow: hidden;
+          img {
+            transform:scale(1.2,1.2);
+            transition: transform 0.8s ease 0s;
+          }
+        }
+      }
+
+      @include mq('sp') {
+        flex-flow: column-reverse;
+      }
+    }
+  }
+
+  .archive-text {
+    flex: 1;
+    margin-left: 50px;
+
+    @include mq('sp') {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  .archive-date {
+    line-height: 1;
+    display: block;
+  }
+
+  .archive-title {
+    font-weight: bold;
+    font-size: 2.6rem;
+    text-decoration: underline;
+    margin-top: 15px;
+    line-height: (39 / 26);
+    word-break:break-all;
+
+    @include mq('sp') {
+      font-size: 2rem;
+    }
+  }
+
+  .archive-desc {
+    line-height: (24 / 16);
+    margin-top: 9px;
+  }
+
+  .archive-image__wrap {
+    width: 240px;
+    position: relative;
+
+    @include mq('sp') {
+      width: 100%;
+    }
+
+    .archive-category {
+      position: absolute;
+      z-index: 1;
+      font-size: 1.2rem;
+      color: cl(white);
+      text-align: center;
+      padding: 4px 4px;
+      min-width: 80px;
+      background: cl(text);
+      max-width: 100%;
+    }
+
+    .archive-image {
+      position: relative;
+      width: 100%;
+      padding-top: 74.5833333333%;
+      overflow: hidden;
+    
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}

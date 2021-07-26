@@ -1,0 +1,96 @@
+.about {
+  background: cl(text);  
+  color: cl(white);
+  padding-top: 50px;
+  padding-bottom: 54px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-top: 25px;
+    padding-bottom: 22px;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .about-trouble {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding-right: 27px;
+
+    @include mq('sp') {
+      display: block;
+      padding-right: 0;
+
+    }
+  }
+
+  .trouble-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: (39 / 18);
+    text-align: center;
+
+    &:nth-child(2) {
+      margin-left: 57px;
+      @include mq('sp') {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    &:last-child {
+      margin-left: 30px;
+      @include mq('sp') {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .about-cont {
+    margin-top: 73px;
+    background: cl(white);
+    padding: 11px 16px 12px;
+
+    @include mq('sp') {
+      margin-top: 40px;
+    }
+  }
+
+  .about-wrap {
+    border: 5px solid cl(text);
+    text-align: center;
+    color: cl(text);
+    padding: 8px 16px 25px;
+  }
+
+  .about-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: (50 / 36);
+
+    @include mq('sp') {
+      font-size: 2.8rem;
+    }
+
+    span {
+      background: linear-gradient(transparent 70%, #F5A623 0%);
+    }
+  }
+
+  .about-desc {
+    font-size: 1.8rem;
+    line-height: (31 / 18);
+    margin-top: 21px;
+
+    @include mq('sp') {
+      font-size: 1.6rem;
+    }
+  }
+
+}

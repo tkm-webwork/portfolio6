@@ -1,0 +1,208 @@
+.plan {
+  padding-top: 50px;
+  padding-bottom: 61px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .play-system {
+
+  }
+
+  .system-wrap {
+    margin-top: 52px;
+    padding-right: 12px;
+
+    @include mq('sp') {
+      margin-top: 40px;
+      padding-right: 0;
+    }
+  }
+
+  .plan-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq('sp') {
+      display: block;
+    }
+  }
+
+  .plan-box {
+    width: 280px;
+    max-width: 100%;
+    font-size: 2.2rem;
+    padding: 27px 16px;
+    line-height: (35 / 22);
+    font-weight: bold;
+    background: cl(text);
+    text-align: center;
+    color: cl(white);
+
+    @include mq('sp') {
+      font-size: 1.8rem;
+      margin: 0 auto;
+    }
+  }
+
+  .plan-plus {
+    width: 27px;
+    height: 27px;
+    position: relative;
+    margin: 5px 35px 0;
+
+    @include mq('sp') {
+      margin: 15px auto;
+    }
+
+    .plan-bar1 {
+      width: 27px;
+      height: 2px;
+      background: cl(text);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .plan-bar2 {
+      width: 2px;
+      height: 27px;
+      background: cl(text);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+  }
+
+  .plan-text {
+    line-height: (27 / 16);
+    margin-top: 40px;
+  }
+
+  .plan-table {
+    margin-top: 86px;
+
+    @include mq('sp') {
+      margin-top: 60px;
+    }
+  }
+
+  .table-wrap {
+    margin-top: 61px;
+    overflow: auto;
+    position: relative;
+
+    @include mq('sp') {
+      margin-top: 40px;
+    }
+  }
+
+  .table-list {
+    display: flex;
+    align-items: flex-end;
+    width: 900px;
+  }
+
+  .table-item {
+    width: 24.4444444444%;
+    &:nth-child(n + 2) {
+      margin-left: 7px;
+    }
+  }
+
+  .table-head {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    background: cl(text);
+    color: cl(white);
+
+    &.-orange {
+      background: cl(button);
+      line-height: 2.2;
+      height: 96px;
+      padding-top: 12px;
+    }
+  }
+
+  .table-body {
+    padding: 23px 0 0;
+    height: 414px;
+    border-left: 0.5px solid cl(text);
+    border-right: 0.5px solid cl(text);
+    border-bottom: 0.5px solid cl(text);
+  }
+
+  .table-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: (40 / 25);
+    text-align: center;
+
+    &.-orange {
+      color: cl(button);
+    }
+  }
+
+  .table-attention {
+    text-align: center;
+  }
+
+  .plan-contents {
+    margin-top: 42px;
+    padding: 0 16px 0 47px;
+    .plan-item {
+      position: relative;
+
+      &:nth-child(n + 2) {
+        margin-top: 11px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 8px;
+        left: -24px;
+        border-left: 3px solid cl(text);
+        border-bottom: 3px solid cl(text);
+        vertical-align: middle;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        top: 8px;
+        transform: rotate(-45deg);
+
+
+
+        @include mq('sp') {
+          width: 8px;
+          height: 4px;
+          left: -15px;
+          top: 11px;
+          border-left: 2px solid cl(text);
+          border-bottom: 2px solid cl(text);  
+          }
+        }
+      }
+
+    }
+    
+    .plan-info {
+      padding: 38px 20px 0 20px;
+      text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+.thanks {
+  padding-top: 81px;
+  padding-bottom: 74px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  
+  .thanks-text {
+    text-align: center;
+    line-height: (27 / 16);
+  }
+
+  .thanks-back {
+    text-align: center;
+    margin-top: 81px;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+}

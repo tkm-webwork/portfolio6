@@ -1,0 +1,57 @@
+.news-archive {
+  padding-top: 50px;
+  padding-bottom: 46px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .archive-cont {
+    margin-top: 36px;
+  }
+
+  .archive-list {
+    border-top: 1px solid #D5D5D5;
+  }
+
+  .archive-item {
+    border-bottom: 1px solid #D5D5D5;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    a {
+      display: flex;
+      transition: opacity .3s ease 0s;
+      @include mq('sp') {
+        flex-flow: column;
+      }
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .archive-date {
+    width: 86px;
+    line-height: (30 / 16);
+  }
+
+  .archive-title {
+    flex: 1;
+    margin-left: 50px;
+    line-height: (24 / 16);
+    margin-top: 4px;
+    text-decoration: underline;
+
+    @include mq('sp') {
+      margin-left: 0px;
+    }
+  }
+}

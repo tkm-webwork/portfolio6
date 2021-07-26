@@ -1,0 +1,92 @@
+.faq {
+  padding-top: 63px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  @include mq('sp') {
+    padding-top: 46px;
+  }
+  .faq-cont {
+    margin-top: 17px;
+  }
+
+  .faq-items {
+    border-top: 1px solid cl(text);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid cl(text);
+    padding: 22px 0 22px;
+  }
+
+  .faq-box {
+
+  }
+
+  .faq-question {
+    position: relative;
+    padding-right: 64px;
+  }
+
+  .faq-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.is-open {
+      
+      .faq-bar2 {
+        transform: rotate(90deg);
+      }
+    }
+
+    .faq-bar1 {
+      width: 25px;
+      height: 3px;
+      background: cl(text);
+      border-radius: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .faq-bar2 {
+      width: 3px;
+      height: 25px;
+      background: cl(text);
+      border-radius: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      transition: all .3s ease 0s;
+    }
+  }
+
+  .faq-answer {
+    background: cl(grey);
+    padding: 18px 26px 20px;
+    margin-top: 15px;
+    display: none;
+  }
+
+  .faq-text {
+
+  }
+
+
+
+
+}

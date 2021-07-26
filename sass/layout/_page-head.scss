@@ -1,0 +1,34 @@
+.page-head {
+  padding: 84px 16px 83px;
+  text-align: center;
+  
+  &.-plan {
+    background: transparent url(../img/plan.png) no-repeat center center / cover;
+  }
+
+  &.-blog {
+    background: transparent url(../img/blog.png) no-repeat center center / cover;
+  }
+
+  &.-news {
+    background: transparent url(../img/news.png) no-repeat center center / cover;
+  }
+
+  &.-contact {
+    background: transparent url(../img/cta.png) no-repeat center center / cover;
+  }
+
+
+  @include mq('sp') {
+    padding: 42px 16px 43px;
+  }
+  .page-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: cl(white);
+
+    @include mq('sp') {
+      font-size: 2.8rem;
+    }
+  }
+}

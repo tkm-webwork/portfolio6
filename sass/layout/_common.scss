@@ -1,0 +1,32 @@
+body {
+  padding-top: $header-height-pc;
+  @include mq('sp') {
+    padding-top: $header-height-sp;
+  }
+}
+
+.inner {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  text-align: center;
+  font-weight: bold;
+
+  @include mq('sp') {
+    font-size: 2.8rem;
+  }
+}
+
+.page-title {
+  font-size: 3.2rem;
+  text-align: center;
+  font-weight: bold;
+
+  @include mq('sp') {
+    font-size: 2.8rem;
+  }
+}

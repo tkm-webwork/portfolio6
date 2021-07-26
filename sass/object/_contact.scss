@@ -1,0 +1,72 @@
+.contact {
+  background: #F8F8F8;
+  padding-top: 7px;
+  padding-bottom: 12px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-top: 14px;
+    padding-bottom: 24px;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .contact-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 112px;
+
+    @include mq('tab-only') {
+      padding-right: 60px;
+    }
+
+    @include mq('sp') {
+      display: block;
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
+  .contact-text {
+    font-weight: bold;
+    margin-bottom: 9px;
+
+    @include mq('tab-only') {
+      font-size: 1.4rem;
+    }
+
+    @include mq('sp') {
+      margin-bottom: 0;
+    }
+  }
+
+  .contact-tel {
+    font-weight: bold;
+    font-size: 3.6rem;
+    margin-left: 20px;
+
+    @include mq('tab-only') {
+      font-size: 2.6rem;
+    }
+
+    @include mq('sp') {
+      margin-left: 0;
+      font-size: 2.8rem;
+    }
+  }
+
+  .contact-time {
+    margin-bottom: 9px;
+    margin-left: 20px;
+
+    @include mq('sp') {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}

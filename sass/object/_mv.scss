@@ -1,0 +1,80 @@
+.mv {
+  background: transparent url(../img/fv.png) no-repeat center center / cover;
+  padding-top: 100px;
+  padding-bottom: 82px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+  .mv-cont {
+    text-align: center;
+    color: cl(white);
+    max-width: 100%;
+  }
+
+  .mv-title {
+    font-size: 4.8rem;
+    font-weight: bold;
+
+    @include mq('sp') {
+      line-height: 1.2;
+      font-size: 4rem;
+    }
+  }
+
+  .mv-lead {
+    font-size: 1.8rem;
+    margin-top: 5px;
+
+    @include mq('sp') {
+      margin-top: 25px;
+      font-size: 1.6rem;
+    }
+  }
+
+  .mv-button {
+    margin-top: 46px;
+
+    @include mq('sp') {
+      margin-top: 30px;
+    }
+
+    a {
+      display: inline-block;
+      background: cl(button);
+      padding: 1.03em 0;
+      width: 260px;
+      max-width: 100%;
+      font-weight: bold;
+      border-radius: 31px;
+      transition: 0.3s ease 0s;
+
+      @include mq('sp') {
+        width: 240px;
+      }
+
+      &:hover {
+        background: cl(hover);
+      }
+    }
+  }
+
+  .mv-text {
+    margin-top: 16px;
+    a {
+      text-decoration: underline;
+      transition: opacity 0.3s ease 0s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

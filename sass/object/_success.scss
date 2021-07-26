@@ -1,0 +1,133 @@
+.success {
+  background: cl(text);
+  color: cl(white);
+  padding-top: 46px;
+  padding-bottom: 60px;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+  }
+
+
+  .success-cont {
+    margin-top: 116px;
+
+    @include mq('sp') {
+      margin-top: 40px;
+    }
+  }
+
+  .success-list {
+    display: flex;
+
+    @include mq('tab') {
+      display: block;
+    }
+  }
+
+  .success-item {
+    width: calc(33.33333% - 30px * 2 / 3);
+
+    @include mq('tab') {
+      width: 100%;
+    }
+
+    &:nth-child(n + 2) {
+      margin-left: 30px;
+
+      @include mq('tab') {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+    }
+
+    &:first-child {
+      .success-model {
+        img {
+          width: 125px;
+          margin: 0 auto;
+          padding-top: 31px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .success-model {
+        img {
+          width: 138px;
+          margin: 0 auto;
+          padding-top: 30px;
+        }
+      }
+    }
+
+    &:last-child {
+      .success-model {
+        img {
+          width: 135px;
+          margin: 0 auto;
+          padding-top: 33px;
+        }
+      }
+    }
+  }
+
+  .success-text {
+    font-weight: bold;
+    line-height: (29 / 16);
+  }
+
+  .success-model {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    background: cl(white);
+    margin-top: 6px;
+
+    img {
+      display: block;
+    }
+  }
+
+  .success-body {
+    color: cl(text);
+    margin-top: 16px;
+  }
+
+  .success-person {
+    display: flex;
+
+    .success-profession {
+      background: cl(grey);
+      width: 100px;
+      height: 32px;
+      line-height: 32px;
+      padding-left: 9px;
+    }
+  
+    .success-name {
+      background: cl(grey);
+      flex: 1;
+      margin-left: 8px;
+      height: 32px;
+      line-height: 32px;
+      padding-left: 13px;
+    }
+  }
+
+
+  .success-result {
+    background: cl(grey);
+    margin-top: 10px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 13px;
+  }
+}

@@ -1,0 +1,377 @@
+/*=================================================================
+# header
+=================================================================*/
+.header {
+  background: cl(white);
+  height: $header-height-pc;
+  width: 100%;
+  position: fixed;
+  z-index: index(header);
+  top: 0;
+  left: 0;
+
+  @include mq('sp') {
+    height: $header-height-sp;
+  }
+
+  // inner
+  .header-inner {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding-left: 15px;
+    padding-right: 10px;
+
+    @include mq('pc-over') {
+      max-width: $layout-width-canvas;
+      margin: 0 auto;
+    }
+  }
+
+  // left
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-logo {
+    width: 136px;
+
+    @include mq('sp') {
+      width: 110px;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  .header-nav {
+    margin-left: 28px;
+
+    @include mq('tab') {
+      display: none;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    &:nth-child(n + 2) {
+      margin-left: 28px;
+    }
+    a {
+      font-weight: bold;
+      display: block;
+      height: inherit;
+      position: relative;
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: cl(text);
+        bottom: 0;
+        left: 0;
+        transition: transform 0.3s ease 0s;
+        transform: scaleX(0);
+      }
+    }
+  }
+
+  // right
+  .header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include mq('tab-only') {
+      margin-right: 53px;
+    }
+  }
+
+  .header-info {
+    text-align: right;
+    margin-top: 11px;
+
+    @include mq('tab') {
+      margin-top: 0;
+    }
+    
+    @include mq('sp') {
+      margin-right: 45px;
+    }
+
+    span {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    strong {
+      font-weight: bold;
+      font-size: 1.6rem;
+      display: block;
+      padding-left: 15px;
+      position: relative;
+      margin-top: 10px;
+      line-height: 1;
+
+      @include mq('tab') {
+        margin-top: 4px;
+      }
+
+      @include mq('sp') {
+        margin-top: 2px;
+        font-size: 1.4rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: transparent url(../img/tel.png) no-repeat center center / contain;
+        width: 10px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+    }
+  }
+
+  .header-button {
+    @include mq('tab') {
+      display: none;
+    }
+
+    &.contact-us {
+      margin-left: 10px;
+    }
+
+    &.document-request {
+      margin-left: 23px;
+    }
+    
+    a {
+      // 資料請求ボタン
+      &.-orange {
+        background: cl(button);
+        width: 142px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background: cl(white);
+          color: cl(button);
+          border: 1px solid cl(button);
+        }
+
+        @include mq('tab-only') {
+          width: 125px;
+        }
+      }
+      // common css
+      display: inline-block;
+      color: cl(white);
+      font-size: 14px;
+      font-weight: bold;
+      width: 137px;
+      max-width: 100%;
+      padding: 0.97em 0;
+      background: cl(text);
+      text-align: center;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background: cl(white);
+        color: cl(text);
+        border: 1px solid cl(text);
+      }
+
+      @include mq('tab-only') {
+        padding: 0.8em 0;
+        width: 120px;
+      }
+    }
+  }
+}
+
+/*=================================================================
+# drawer menu
+=================================================================*/
+.drawer-icon {
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  z-index: index(icon);
+  display: none;
+  transition: all 0.3s ease 0s;
+  appearance: none;
+  background-color: transparent;
+  font: inherit;
+  border: none;
+  padding: 0;
+
+  @include mq('sp') {
+    display: block;
+  }
+
+  @include mq('tab-only') {
+    display: block;
+    top: 25px;
+  }
+
+  &.is-active {
+    .drawer-bar1 {
+      transform: rotate(-45deg);
+      top: 8px;
+      background: cl(white);
+    }
+    .drawer-bar2 {
+      display: none;
+    }
+    .drawer-bar3 {
+      transform: rotate(45deg);
+      top: 8px;
+      background: cl(white);
+    }
+  }
+}
+
+.drawer-bars {
+  width: 22px;
+  height: 20px;
+  display: block;
+  position: relative;
+  transition: all 0.5s ease 0s;
+
+  @include mq('tab-only') {
+    width: 30px;
+    height: 30px;
+  }
+
+  .drawer-bar1,
+  .drawer-bar2,
+  .drawer-bar3 {
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    background: cl(text);
+    top: 0;
+    left: 0;
+
+    @include mq('tab-only') {
+      width: 30px;
+      height: 6px;
+    }
+  }
+
+  .drawer-bar1 {
+    top: 0;
+  }
+
+  .drawer-bar2 {
+    top: 8px;
+    @include mq('tab-only') {
+      top: 12px;
+    }
+  }
+
+  .drawer-bar3 {
+    top: 16px;
+    @include mq('tab-only') {
+      top: 24px;
+    }
+  }
+}
+
+// ドロワー本体
+.drawer-content {
+  width: 200px;
+  height: 100%;
+  background: transparent;
+  position: fixed;
+  z-index: index(drawer);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.drawer-items {
+
+  .drawer-item {
+    
+    a {
+      display: block;
+      color: #fff;
+      padding: 12px 20px;
+      position: relative;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.drawer-button {
+  text-align: center;
+  
+  &.document-request {
+    margin-top: 12px;
+  }
+
+  &.drawer-contact {
+    margin-top: 24px;
+  }
+
+  a {
+    // 資料請求ボタン
+    &.-orange {
+      background: cl(button);
+    }
+    // common css
+    display: inline-block;
+    color: cl(white);
+    font-size: 14px;
+    font-weight: bold;
+    width: 137px;
+    max-width: 100%;
+    padding: 0.97em 0;
+    background: cl(text);
+    text-align: center;
+    border-radius: 5px;
+  }
+}
+
+
+.drawer-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: index(bg);
+  background: rgba(63, 81, 181, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
